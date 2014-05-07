@@ -1,0 +1,113 @@
+Introducción a Go
+7 Mayo 2014
+
+golang.mx
+
+* Go, un lenguaje de programación.
+
+Go es un lenguaje de programación de propósito general con un set de
+instrucciones reducido.
+
+El compilador de Go puede producir programas estáticos para diferentes
+arquitecturas. Al producir un binario estático no es necesario depender de un
+intérprete o máquina virtual para ejecutar el programa.
+
+* La sintaxis de Go
+ 
+.play hello-world.go
+
+* Compilando el primer programa
+
+La instrucción `go build` compila código `.go`.
+
+  go build -o hello-world ./hello-world.go
+
+El resultado es un programa nativo que puede correr en otras máquinas con el mismo sistema operativo y procesador.
+
+  file ./hello-world
+  ./hello-world: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, not stripped
+
+* Funciones  
+
+Las funciones se declaran con la palabra clave `func` seguida del nombre de la
+función, la lista de argumentos y el tipo de la función.
+
+.code hello-func.go /^func foo/,/}/
+
+Los tipos de dato se colocan al final de la declaración. En el ejemplo siguiente las variables `número` y `veces` son ambos de tipo `int`. Notemos también que, según la declaración, la función `multiplica()` regresa un valor de tipo `int`.
+
+.code hello-func.go /^func multiplica/,/}/
+
+¿Viste el acento en `número`? ¡Es válido! Go lo compila sin problemas.
+
+* Funciones
+
+Las funciones pueden tener múltiples valores de entrada y también múltiples valores de salida.
+
+.code hello-func.go /^func intercambia/,/}/
+
+En el ejemplo siguiente vemos a `intercambia()` en acción:
+
+.play hello-func.go /^func main/,/}/
+
+* Funciones
+
+Una función también puede ser anónima e incluso asignarse a una variable.
+
+.play hello-func-2.go /^func main/,/^}/
+
+* Tipos de datos primarios
+
+Los tipos de datos básicos en Go son:
+
+- uint: Entero sin signo (de 32 o 64 bits).
+- int: Entero con signo (de 32 o 64 bits).
+- float64: Decimal de 64bits.
+- float32: Decimal de 32bits.
+- byte: Entero sin signo de 8bits.
+- rune: Caracter unicode.
+- string: Cadena de caracteres unicode.
+
+* Otros tipos de datos
+
+- uint8: Todos los enteros de 0 a 255.
+- uint16: Todos los enteros de 0 a 65535.
+- uint32: Todos los enteros de 0 a 4294967295.
+- uint64: Todos los enteros de 0 a 18446744073709551615.
+- int8: Todos los enteros de -128 a 127.
+- int16: Todos los enteros de -32768 a 32767.
+- int32: Todos los enteros de -2147483648 a 2147483647.
+- int64: Todos los enteros de -9223372036854775808 a 9223372036854775807.
+- complex64: Números complejos con partes imaginaria y real de tipo float32.
+- complex128: Números completos con partes imaginaria y real de tipo float64.
+
+* Variables
+
+En donde describimos variables y su alcance.
+
+* Constantes
+
+En donde describimos constantes.
+
+* Condiciones
+
+* Arreglos y partes
+
+En donde describimos como hacer slices y arrays.
+
+* Ciclos
+
+En donde describimos como usar for como ciclo general.
+
+* Estructuras
+
+En donde describimos la definición de estructuras. 
+
+# Tipos avanzados
+
+En donde describimos la definición de tipos propios.
+
+* Próximos pasos
+
+En donde hablamos de referencias a concurrencia, paquetes y testing.
+
