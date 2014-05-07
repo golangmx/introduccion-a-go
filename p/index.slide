@@ -91,6 +91,8 @@ En donde describimos constantes.
 
 * Condiciones
 
+En donde describimos `if`.
+
 * Arreglos y partes
 
 En donde describimos como hacer slices y arrays.
