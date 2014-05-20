@@ -1,16 +1,32 @@
 Introducción a Go
-7 Mayo 2014
+Mayo 2014
 
 golang.mx
 
-* Go, un lenguaje de programación.
+* ¿Qué es Go?
 
-Go es un lenguaje de programación de propósito general con un set de
-instrucciones reducido.
+Go es un lenguage de programación de código abierto, iniciado en Google, que
+facilita escribir sistemas simples, confiables y eficientes.
+
+.image gopher.png
+
+* Características de Go
+
+- Tiene tipos estáticos de datos.
+- Tiene recolector de basura.
+- Permite ejecutar tareas concurrentes (goroutines).
+- Puede comunicar mensajes entrea tareas concurrentes.
+- Es estructurado e imperativo.
+
+* Go es multiplataforma
 
 El compilador de Go puede producir programas estáticos para diferentes
-arquitecturas. Al producir un binario estático no es necesario depender de un
-intérprete o máquina virtual para ejecutar el programa.
+arquitecturas y sistemas operativos. Un programa compilado de Go no require de
+una máquina virtual o intérprete para ejecutarse.
+
+Actualmente, Go tiene soporte oficial en OSX, Windows, Linux y FreeBSD para
+(x86 y x86_64), pero puede compilarse y usarse además en OpenBSD, Plan9, NetBSD
+e incluso en arquitecturas ARM, como Raspberry PI.
 
 * La sintaxis de Go
  
